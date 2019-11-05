@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var usrNameFld: UITextField!
+    @IBOutlet weak var pwdFld: UITextField!
+    @IBOutlet weak var onclick: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func loginBtn(_ sender:Any){
+        
     }
 
 
