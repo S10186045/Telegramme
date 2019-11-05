@@ -31,6 +31,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRV-yY-p48"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with Telegramme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg7-04-2EU">
                                 <rect key="frame" x="80" y="169" width="254" height="30"/>
@@ -58,7 +61,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="XRy-B1-1C0"/>
                     <connections>
-                        <outlet property="onclick" destination="saA-Up-M1I" id="XqC-IN-Rz8"/>
                         <outlet property="pwdFld" destination="FYk-fQ-T6a" id="umb-ea-GdQ"/>
                         <outlet property="usrNameFld" destination="pon-pY-jRW" id="CBb-yO-dx9"/>
                     </connections>

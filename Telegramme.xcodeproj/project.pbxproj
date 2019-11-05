@@ -13,6 +13,10 @@
 		BF0CB797237163F000D6E510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0CB795237163F000D6E510 /* Main.storyboard */; };
 		BF0CB799237163F200D6E510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0CB798237163F200D6E510 /* Assets.xcassets */; };
 		BF0CB79C237163F200D6E510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0CB79A237163F200D6E510 /* LaunchScreen.storyboard */; };
+		BF0CB7A62371673B00D6E510 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0CB7A52371673B00D6E510 /* Content.storyboard */; };
+		BF0CB7A823716AAF00D6E510 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0CB7A723716AAF00D6E510 /* AddContactViewController.swift */; };
+		BF0CB7AA237171FF00D6E510 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0CB7A9237171FF00D6E510 /* Contact.swift */; };
+		BF0CB7AC2371736C00D6E510 /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0CB7AB2371736C00D6E510 /* ShowContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BF0CB798237163F200D6E510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0CB79B237163F200D6E510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF0CB79D237163F200D6E510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0CB7A52371673B00D6E510 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
+		BF0CB7A723716AAF00D6E510 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		BF0CB7A9237171FF00D6E510 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		BF0CB7AB2371736C00D6E510 /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		BF0CB78E237163F000D6E510 /* Telegramme */ = {
 			isa = PBXGroup;
 			children = (
+				BF0CB7A52371673B00D6E510 /* Content.storyboard */,
+				BF0CB7A723716AAF00D6E510 /* AddContactViewController.swift */,
+				BF0CB7AB2371736C00D6E510 /* ShowContactViewController.swift */,
 				BF0CB78F237163F000D6E510 /* AppDelegate.swift */,
 				BF0CB791237163F000D6E510 /* SceneDelegate.swift */,
 				BF0CB793237163F000D6E510 /* ViewController.swift */,
@@ -63,6 +74,7 @@
 				BF0CB798237163F200D6E510 /* Assets.xcassets */,
 				BF0CB79A237163F200D6E510 /* LaunchScreen.storyboard */,
 				BF0CB79D237163F200D6E510 /* Info.plist */,
+				BF0CB7A9237171FF00D6E510 /* Contact.swift */,
 			);
 			path = Telegramme;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0CB7A62371673B00D6E510 /* Content.storyboard in Resources */,
 				BF0CB79C237163F200D6E510 /* LaunchScreen.storyboard in Resources */,
 				BF0CB799237163F200D6E510 /* Assets.xcassets in Resources */,
 				BF0CB797237163F000D6E510 /* Main.storyboard in Resources */,
@@ -139,7 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0CB794237163F000D6E510 /* ViewController.swift in Sources */,
+				BF0CB7A823716AAF00D6E510 /* AddContactViewController.swift in Sources */,
+				BF0CB7AA237171FF00D6E510 /* Contact.swift in Sources */,
 				BF0CB790237163F000D6E510 /* AppDelegate.swift in Sources */,
+				BF0CB7AC2371736C00D6E510 /* ShowContactViewController.swift in Sources */,
 				BF0CB792237163F000D6E510 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
