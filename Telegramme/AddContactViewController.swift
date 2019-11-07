@@ -16,6 +16,7 @@ class AddContactViewController : UIViewController{
     @IBOutlet weak var mobileFld: UITextField!
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
     }
     
@@ -29,6 +30,10 @@ class AddContactViewController : UIViewController{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let c = Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
         appDelegate.contactList.append(c)
+        let alertController:UIAlertController = UIAlertController(title: "Message", message: "You have added " + firstNameFld.text! + " " + lastNameFld.text! + " to your contact list", preferredStyle: UIAlertController.Style.alert)
+        let alertAction:UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
         print(String(appDelegate.contactList.count))
     }
     
