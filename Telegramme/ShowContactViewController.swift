@@ -16,9 +16,6 @@ class ShowContactViewController : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let editButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(toggleEditing)) // create a bat button
-        navigationItem.rightBarButtonItem = editButton // assign button
-        
         self.tableView.reloadData() //refresh data
     }
     
@@ -49,10 +46,10 @@ class ShowContactViewController : UITableViewController{
         }
     }
     
- @objc private func toggleEditing() {
-         tableView.setEditing(!tableView.isEditing, animated: true) // Set opposite value of current editing status
-         navigationItem.rightBarButtonItem?.title = tableView.isEditing ? "Done" : "Edit" // Set title depending on the editing status
-     }
+    
+
+
+    
 
     
 }

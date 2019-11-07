@@ -175,7 +175,15 @@
                             <outlet property="delegate" destination="PMs-nt-biO" id="QZw-hr-GwI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contact List" id="qgK-Gt-f9U"/>
+                    <navigationItem key="navigationItem" title="Contact List" id="qgK-Gt-f9U">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="err-Z6-3mY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bpb-Zw-yIj">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRo-g0-ZEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
