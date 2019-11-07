@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ELD-hW-MVK" firstAttribute="trailing" secondItem="gu0-Uc-iXP" secondAttribute="trailing" constant="34" id="073-qE-YeM"/>
                             <constraint firstItem="ELD-hW-MVK" firstAttribute="trailing" secondItem="oRp-n6-DQV" secondAttribute="trailing" constant="34" id="7za-ww-DQn"/>
@@ -61,6 +61,9 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createBtn:" destination="USe-C9-HoZ" eventType="touchUpInside" id="S7Q-5u-X4p"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="createBtn:" destination="USe-C9-HoZ" id="KW2-aq-r88"/>
