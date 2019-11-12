@@ -49,6 +49,7 @@ class ShowContactViewController : UITableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let cl = appDelegate.contactList[(indexPath as NSIndexPath).row]
         let alert = UIAlertController(title: "Edit", message:"Edit \(cl.firstName)", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(alert:UIAlertAction!) in print("Cancle")}))
      
         
         alert.addTextField { (textField)  in textField.placeholder = "Enter your first name" }
@@ -66,7 +67,7 @@ class ShowContactViewController : UITableViewController{
             let c = Contact(firstname: textField.text!, lastname: textField1.text!, mobileno: textField2.text!)
             appDelegate.contactList.remove(at: indexPath.row)
             appDelegate.contactList.append(c)
-            
+            appDelegate.contactList.sort(by: {$0.firstName < $1.firstName})
             if textField.text != ""{
                 print(textField.text!)
                 
