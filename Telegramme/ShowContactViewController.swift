@@ -46,12 +46,55 @@ class ShowContactViewController : UITableViewController{
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let cl = appDelegate.contactList[(indexPath as NSIndexPath).row]
+        let alert = UIAlertController(title: "Edit", message:"Edit \(cl.firstName)", preferredStyle: UIAlertController.Style.alert)
+     
+        
+        alert.addTextField { (textField)  in textField.placeholder = "Enter your first name" }
+        
+        alert.addTextField { (textField)  in textField.placeholder = "Enter your last name" }
+        
+        alert.addTextField { (textField)  in textField.placeholder = "Mobile Num" }
+        
+        let save = UIAlertAction(title: "Save", style: .default) { (alertAction) in
+        let textField = alert.textFields![0] as UITextField
+        let textField1 = alert.textFields![1] as UITextField
+        let textField2 = alert.textFields![2] as UITextField
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let c = Contact(firstname: textField.text!, lastname: textField1.text!, mobileno: textField2.text!)
+            appDelegate.contactList.remove(at: indexPath.row)
+            appDelegate.contactList.append(c)
+            
+            if textField.text != ""{
+                print(textField.text!)
+                
+            } else {
+                print("TF 1 is Empty...")
+            }
+            
+            if textField1.text != ""{
+                print(textField1.text!)
+            } else {
+                print("TF 1 is Empty...")
+            }
+            
+            if textField2.text != ""{
+                print(textField2.text!)
+            } else {
+                print("TF 3 is Empty...")
+            }
+            
+            self.tableView.reloadData()
+            
+            
+    }
+        alert.addAction(save)
+        self.present(alert, animated: true, completion: nil)
     
-
-
-    
-
-    
+   
+        
 }
 
-
+}
