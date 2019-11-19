@@ -27,14 +27,17 @@ class AddContactViewController : UIViewController{
     }
     
     @IBAction func createBtn(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         let c = Contact(firstname: firstNameFld.text!, lastname: lastNameFld.text!, mobileno: mobileFld.text!)
-        appDelegate.contactList.append(c)
+        
+        ContactController().AddContact(newContact:c)
+        
+        
         let alertController:UIAlertController = UIAlertController(title: "Message", message: "You have added " + firstNameFld.text! + " " + lastNameFld.text! + " to your contact list", preferredStyle: UIAlertController.Style.alert)
         let alertAction:UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:nil)
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
-        print(String(appDelegate.contactList.count))
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
