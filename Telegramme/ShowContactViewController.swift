@@ -15,6 +15,7 @@ class ShowContactViewController : UITableViewController{
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var contactController:ContactController = ContactController()
+   
     var contactList:[Contact] = []
     
     
@@ -56,41 +57,35 @@ class ShowContactViewController : UITableViewController{
             contactController.deleteContact(mobileno: currentContactNum)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
+        
+
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let cl = contactList[(indexPath as NSIndexPath).row]
-        let alert = UIAlertController(title: "Edit", message:"Edit \(cl.firstName)", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(alert:UIAlertAction!) in print("Cancle")}))
-     
         
-        alert.addTextField { (textField)  in textField.placeholder = "Enter your first name" }
+        let Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "MessageViewController") as! MessageViewController
         
-        alert.addTextField { (textField)  in textField.placeholder = "Enter your last name" }
+        DvC.getName0 = cl.firstName
+        DvC.getName = cl.lastName
+        DvC.getPhoneNum = cl.mobileNo
         
-        alert.addTextField { (textField)  in textField.placeholder = "Mobile Num" }
-        
-        
-        let save = UIAlertAction(title: "Save", style: .default) { (alertAction) in
-            
-            let textField = alert.textFields![0] as UITextField
-            let textField1 = alert.textFields![1] as UITextField
-            let textField2 = alert.textFields![2] as UITextField
-            let currentContactNum = self.contactList[indexPath.row].mobileNo
-            let c = Contact(firstname: textField.text!, lastname: textField1.text!, mobileno: textField2.text!)
-        
-            self.contactController.updateContact(mobileno: currentContactNum , newContact: c)
-                
-            self.tableView.reloadData()
+        self.navigationController?.pushViewController(DvC, animated: true)
             
             
     }
-        alert.addAction(save)
-        self.present(alert, animated: true, completion: nil)
+    
+
+    
+    
+
     
     
    
         
 }
 
-}
+
